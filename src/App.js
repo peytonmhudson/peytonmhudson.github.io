@@ -151,7 +151,7 @@ const portfolio_items = [
     },
     {
         title: "Arches",
-        description: "Digitized image of Arches National Park, AZ.",
+        description: "Digitized image of Arches National Park, UT.",
         year: '2024',
         img: art_Arches,
         category: "digital"
