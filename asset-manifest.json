@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b98c7d2.css",
-    "main.js": "/static/js/main.df5f7054.js",
-    "static/js/453.0a36081d.chunk.js": "/static/js/453.0a36081d.chunk.js",
-    "static/media/cowgirl.jpg": "/static/media/cowgirl.7019ed93ececfcfa6f57.jpg",
-    "static/media/Arches.jpg": "/static/media/Arches.b4551ef733a4a66a9157.jpg",
-    "static/media/girl_on_canvas.jpg": "/static/media/girl_on_canvas.f6f033a422534e780209.jpg",
-    "static/media/Union_poster_.jpg": "/static/media/Union_poster_.4999ad7b4f33984636dc.jpg",
-    "static/media/translogo.png": "/static/media/translogo.1904dfb67ec8b7c3d9d4.png",
-    "static/media/CC_Logo.jpg": "/static/media/CC_Logo.f86dab65b372830635dd.jpg",
-    "static/media/prof.webp": "/static/media/prof.7a6a6c54279a54d1977c.webp",
-    "static/media/lines.png": "/static/media/lines.34d119cc7ff9aea0c0d0.png",
-    "static/media/waves.svg": "/static/media/waves.50ee9e67d784ae5d37c8bcf797e37ae0.svg",
-    "static/media/layered-waves-haikei.svg": "/static/media/layered-waves-haikei.71c5dcb8783efb0e384434aa6ad6a15c.svg",
-    "index.html": "/index.html",
-    "static/media/curve.svg": "/static/media/curve.c462a6fa493c3bedced3ef1705bac4d5.svg",
-    "main.7b98c7d2.css.map": "/static/css/main.7b98c7d2.css.map",
-    "main.df5f7054.js.map": "/static/js/main.df5f7054.js.map",
-    "453.0a36081d.chunk.js.map": "/static/js/453.0a36081d.chunk.js.map"
+    "main.css": "/my-project/static/css/main.7b98c7d2.css",
+    "main.js": "/my-project/static/js/main.bd699127.js",
+    "static/js/453.0a36081d.chunk.js": "/my-project/static/js/453.0a36081d.chunk.js",
+    "static/media/cowgirl.jpg": "/my-project/static/media/cowgirl.7019ed93ececfcfa6f57.jpg",
+    "static/media/Arches.jpg": "/my-project/static/media/Arches.b4551ef733a4a66a9157.jpg",
+    "static/media/girl_on_canvas.jpg": "/my-project/static/media/girl_on_canvas.f6f033a422534e780209.jpg",
+    "static/media/Union_poster_.jpg": "/my-project/static/media/Union_poster_.4999ad7b4f33984636dc.jpg",
+    "static/media/translogo.png": "/my-project/static/media/translogo.1904dfb67ec8b7c3d9d4.png",
+    "static/media/CC_Logo.jpg": "/my-project/static/media/CC_Logo.f86dab65b372830635dd.jpg",
+    "static/media/prof.webp": "/my-project/static/media/prof.7a6a6c54279a54d1977c.webp",
+    "static/media/lines.png": "/my-project/static/media/lines.34d119cc7ff9aea0c0d0.png",
+    "static/media/waves.svg": "/my-project/static/media/waves.50ee9e67d784ae5d37c8bcf797e37ae0.svg",
+    "static/media/layered-waves-haikei.svg": "/my-project/static/media/layered-waves-haikei.71c5dcb8783efb0e384434aa6ad6a15c.svg",
+    "index.html": "/my-project/index.html",
+    "static/media/curve.svg": "/my-project/static/media/curve.c462a6fa493c3bedced3ef1705bac4d5.svg",
+    "main.7b98c7d2.css.map": "/my-project/static/css/main.7b98c7d2.css.map",
+    "main.bd699127.js.map": "/my-project/static/js/main.bd699127.js.map",
+    "453.0a36081d.chunk.js.map": "/my-project/static/js/453.0a36081d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b98c7d2.css",
-    "static/js/main.df5f7054.js"
+    "static/js/main.bd699127.js"
   ]
 }
