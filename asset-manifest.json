@@ -1,26 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.7b98c7d2.css",
-    "main.js": "/static/js/main.df5f7054.js",
+    "main.js": "/static/js/main.4e86046d.js",
     "static/js/453.0a36081d.chunk.js": "/static/js/453.0a36081d.chunk.js",
     "static/media/cowgirl.jpg": "/static/media/cowgirl.7019ed93ececfcfa6f57.jpg",
+    "static/media/headshot.jpg": "/static/media/headshot.28305600e9022bb85ccd.jpg",
+    "static/media/older_lady.jpg": "/static/media/older_lady.2c4b464cfef84527006d.jpg",
     "static/media/Arches.jpg": "/static/media/Arches.b4551ef733a4a66a9157.jpg",
     "static/media/girl_on_canvas.jpg": "/static/media/girl_on_canvas.f6f033a422534e780209.jpg",
     "static/media/Union_poster_.jpg": "/static/media/Union_poster_.4999ad7b4f33984636dc.jpg",
     "static/media/translogo.png": "/static/media/translogo.1904dfb67ec8b7c3d9d4.png",
+    "static/media/big_cat_logo.jpg": "/static/media/big_cat_logo.6cbd19de9f81063d7dc1.jpg",
     "static/media/CC_Logo.jpg": "/static/media/CC_Logo.f86dab65b372830635dd.jpg",
-    "static/media/prof.webp": "/static/media/prof.7a6a6c54279a54d1977c.webp",
     "static/media/lines.png": "/static/media/lines.34d119cc7ff9aea0c0d0.png",
     "static/media/waves.svg": "/static/media/waves.50ee9e67d784ae5d37c8bcf797e37ae0.svg",
     "static/media/layered-waves-haikei.svg": "/static/media/layered-waves-haikei.71c5dcb8783efb0e384434aa6ad6a15c.svg",
     "index.html": "/index.html",
     "static/media/curve.svg": "/static/media/curve.c462a6fa493c3bedced3ef1705bac4d5.svg",
     "main.7b98c7d2.css.map": "/static/css/main.7b98c7d2.css.map",
-    "main.df5f7054.js.map": "/static/js/main.df5f7054.js.map",
+    "main.4e86046d.js.map": "/static/js/main.4e86046d.js.map",
     "453.0a36081d.chunk.js.map": "/static/js/453.0a36081d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b98c7d2.css",
-    "static/js/main.df5f7054.js"
+    "static/js/main.4e86046d.js"
   ]
 }
