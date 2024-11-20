@@ -1,5 +1,5 @@
 import logo from './translogo.png';
-import headshot from './prof.webp';
+import headshot from './headshot.jpg';
 import divider_curve from './curve.svg';
 import gradient from './layered-waves-haikei.svg';
 import divider_waves from './waves.svg';
@@ -9,8 +9,10 @@ import mobile_lines from './lines.png';
 import art_GirlOnCanvas from './Artwork/girl_on_canvas.jpg';
 import art_Cowgirl from './Artwork/cowgirl.jpg';
 import art_CCLogo from './Artwork/CC_Logo.jpg';
+import art_CCLogoTwo from './Artwork/big_cat_logo.jpg';
 import art_UnionPost from './Artwork/Union_poster_.jpg';
 import art_Arches from './Artwork/Arches.jpg';
+import art_OlderLady from './Artwork/older_lady.jpg';
 
 
 import $ from 'jquery';
@@ -127,6 +129,13 @@ const portfolio_items = [
         category: "digital"
     },
     {
+        title: "China Cat Estate Sales Logo",
+        description: "A second logo created for China Cat Estate Sales.",
+        year: '2024',
+        img: art_CCLogoTwo,
+        category: "digital"
+    },
+    {
         title: "Arches",
         description: "Digitized image of Arches National Park, AZ.",
         year: '2024',
@@ -145,6 +154,13 @@ const portfolio_items = [
         description: "Oil on wood panel",
         img: art_Cowgirl,
         year: '2022',
+        category: "art"
+    },
+    {
+        title: "Painting of Photograph by Charles Traub",
+        description: "Oil on paper",
+        year: '2022',
+        img: art_OlderLady,
         category: "art"
     }
 //TODO: Add in other china cat.
@@ -384,17 +400,13 @@ function LinkedYellowButton({text, link}) {
 
 function Body() {
 
-    const [schoolItems, setSchoolItems] = useState(
-        school_experience.map((item, index) => (
-            <Dropper key={index} item={item}/>
-        ))
-    );
+    const schoolItems = school_experience.map((item, index) => (
+        <Dropper key={index} item={item}/>
+    ));
 
-    const [workItems, setWorkItems] = useState(
-        work_experience.map((item, index) => (
-            <Dropper key={index} item={item}/>
-        ))
-    );
+    const workItems = work_experience.map((item, index) => (
+        <Dropper key={index} item={item}/>
+    ));
 
 
     //map portfolio items later..., maybe a picture, date, description etc...
@@ -476,7 +488,8 @@ function Body() {
                      className="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-40">
                     <p onClick={clearOverlay}
                        className="absolute top-20 right-16 lg:right-1/4 text-white cursor-pointer font-bold lg:text-3xl hover:text-crimson transition-all duration-100">X</p>
-                    <img onClick={toggleZoom} src={overlayContent} className="w-10/12 h-10/12 lg:w-4/12 lg:h-4/12 z-50 cursor-zoom-in"/>
+                    <img onClick={toggleZoom} src={overlayContent}
+                         className="w-10/12 h-10/12 lg:w-4/12 lg:h-4/12 z-50 cursor-zoom-in"/>
                 </div>
 
                 <div className="overflow-hidden">
@@ -590,12 +603,12 @@ function Body() {
 
                     <div className="lg:w-4/12 px-12 lg:px-0">
                         <p className="text-xl leading-loose">
-                            <b>(Something about yourself)</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.
+                            Hi, I'm Peyton! I'm currently studying Drawing and Art at the University of North Florida,
+                            where I'm combining my love for creativity with a deep interest in history. My dream is to
+                            work in a space that values both—whether that's in the digital art world or in a museum
+                            setting, preserving and sharing stories from the past. I’m looking for opportunities where I
+                            can bring my passion for drawing, digital art, and history together, ideally with a company
+                            that values and supports these areas as much as I do.
                         </p>
                     </div>
 
