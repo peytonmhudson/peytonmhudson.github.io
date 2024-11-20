@@ -13,7 +13,7 @@ import art_CCLogoTwo from './Artwork/big_cat_logo.jpg';
 import art_UnionPost from './Artwork/Union_poster_.jpg';
 import art_Arches from './Artwork/Arches.jpg';
 import art_OlderLady from './Artwork/older_lady.jpg';
-
+import art_DressUpDolly from './Artwork/DressUpDolly.jpg';
 
 import $ from 'jquery';
 import React, {useState} from 'react';
@@ -39,7 +39,7 @@ let work_experience = [
         description: "Art Researcher / 2021 - Current",
         experience: [
             "Art Pricing",
-            "Research of Art",
+            "Art Research",
             "Art Appraisals",
             "Historical Context",
             "Artwork Authentication",
@@ -60,11 +60,11 @@ let work_experience = [
 
 let school_experience = [
     {
-        title: "Orange Park Highschool",
+        title: "Orange Park High School",
         description: "2019 - 2023",
         experience: [
-            "Highschool Diploma",
-            "Dual Enrollment with SJR State"
+            "High School Diploma",
+            "Dual Enrollment with SJR State College"
         ]
     },
     {
@@ -72,7 +72,7 @@ let school_experience = [
         description: "2019 - 2023",
         experience: [
             "Associates in Arts Degree",
-            "Dual Enrollment with Highschool",
+            "Dual Enrollment with High School",
         ]
 
 
@@ -92,14 +92,14 @@ let school_experience = [
         experience: [
             "Drawing I",
             "Drawing II",
-            "Two Dimensional Design",
-            "Three Dimensional Design",
+            "Two-Dimensional Design",
+            "Three-Dimensional Design",
             "Ceramics",
             "Art History I & II",
             "Art Appreciation",
             "Career Development",
             "American Art I",
-            "Acient Greece History",
+            "Ancient Greece History",
             "Early Modern Ireland History",
             "The Craft of The Historian",
             "US Environmental History",
@@ -136,17 +136,24 @@ const portfolio_items = [
         category: "digital"
     },
     {
+        title: "Flyer",
+        description: "Flyer for Clay County Teachers' Union",
+        img: art_UnionPost,
+        year: '2024',
+        category: "digital"
+    },
+    {
+        title: "Dress Up Dolly",
+        description: "Design for local business Dress Up Dolly",
+        year: '2024',
+        img: art_DressUpDolly,
+        category: "digital"
+    },
+    {
         title: "Arches",
         description: "Digitized image of Arches National Park, AZ.",
         year: '2024',
         img: art_Arches,
-        category: "digital"
-    },
-    {
-        title: "Flyer",
-        description: "Flyer for Clay County Teacher's Union",
-        img: art_UnionPost,
-        year: '2024',
         category: "digital"
     },
     {
@@ -534,8 +541,11 @@ function Body() {
             <div className="dropIn w-full lg:w-4/12 flex flex-col items-center gap-1 h-96">
 
                 {portfolioItem.img === null ? <></> :
-                    <img onClick={imgPop} src={portfolioItem.img}
-                         className="cursor-pointer min-h-72 min-w-72 max-w-72 max-h-72 " alt=""/>}
+                    <div className="min-h-72 min-w-72 max-w-72 max-h-72">
+                        <img onClick={imgPop} src={portfolioItem.img}
+                             className="cursor-pointer w-full h-full" alt={portfolioItem.description} />
+                    </div>
+                }
 
                 <h1 className="text-black text-2xl text-center w-8/12">{portfolioItem.title}</h1>
                 <p className="text-gray-800 text-lg italic text-center w-8/12">{portfolioItem.description}</p>
