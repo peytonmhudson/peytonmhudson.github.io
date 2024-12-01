@@ -401,6 +401,9 @@ function LinkedYellowButton({text, link}) {
             <motion.button
                 initial={{y: 100}}
                 whileInView={{y:0}}
+
+                whileTap={{scale: 0.9}}
+                whileHover={{scale: 1.075}}
                 transition={standardSpring}
                 className="transition-colors hover:bg-transparent border-2 border-sunshine bg-sunshine py-3 px-9 rounded-2xl">
                 {text}
@@ -568,10 +571,10 @@ function Body() {
                         className="slider-img w-full lg:w-4/12 flex flex-col items-center gap-1 h-96">
 
                 {portfolioItem.img === null ? <></> :
-                    <div className="min-h-72 min-w-72 max-w-72 max-h-72">
+                    <motion.div initial={{scale: 1.0}} whileTap={{scale: 0.9}} whileHover={{scale:1.04}} className="min-h-72 min-w-72 max-w-72 max-h-72">
                         <img onClick={imgPop} src={portfolioItem.img}
                              className="cursor-pointer w-full h-full" alt={portfolioItem.description}/>
-                    </div>
+                    </motion.div>
                 }
 
                 <h1 className="text-black text-2xl text-center w-8/12">{portfolioItem.title}</h1>
