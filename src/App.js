@@ -5,6 +5,8 @@ import gradient from './layered-waves-haikei.svg';
 import divider_waves from './waves.svg';
 import mobile_lines from './lines.png';
 
+import {motion, stagger, animate} from "motion/react"
+
 //start import of art
 import art_GirlOnCanvas from './Artwork/girl_on_canvas.jpg';
 import art_Cowgirl from './Artwork/cowgirl.jpg';
@@ -20,6 +22,7 @@ import React, {useState} from 'react';
 
 
 import './App.css';
+import {inView} from "motion";
 
 
 let work_experience = [
@@ -393,17 +396,25 @@ function Footer() {
 function LinkedYellowButton({text, link}) {
 
     return (
-        <a className="transition-all duration-300 text-white font-semibold text-2xl " href={link}
+        <a className="transition-colors text-white font-semibold text-2xl " href={link}
            rel="noopener noreferrer">
-            <button
-                className="transition-all duration-300 hover:bg-transparent border-2 border-sunshine bg-sunshine py-3 px-9 rounded-2xl">
+            <motion.button
+                initial={{y: 100}}
+                whileInView={{y:0}}
+                transition={standardSpring}
+                className="transition-colors hover:bg-transparent border-2 border-sunshine bg-sunshine py-3 px-9 rounded-2xl">
                 {text}
-            </button>
+            </motion.button>
         </a>
     );
 
 }
 
+const standardSpring = {
+    type: "spring",
+    damping: 200,
+    stiffness: 700,
+};
 
 function Body() {
 
@@ -423,7 +434,7 @@ function Body() {
 
     const [activePortfolio, setActivePortfolio] = useState(filterPortfolioItems(filter).map(item =>
         (
-            <PortfolioItem portfolioItem={item} setOverlay={setOverlayContent}/>
+            <PortfolioItem portfolioItem={item}/>
         )));
 
     //map the portfolio using the filter...
@@ -519,7 +530,7 @@ function Body() {
     }
 
     //set up the styling for how the portfolio item will render => used for all categories.
-    function PortfolioItem({portfolioItem, setOverlay}) {
+    function PortfolioItem({portfolioItem}) {
 
         /*
          {
@@ -532,18 +543,34 @@ function Body() {
          */
 
         function imgPop(event) {
-            const src = event.target.src; // Get the src from the clicked image
-            setOverlayContent(src); // Set the overlay content
+            event.stopPropagation(); // Prevent event bubbling
+            const src = event.target.src;
+            setOverlayContent(src);
         }
+
+
+        React.useEffect(() => {
+
+            inView('.slider-img', (info) => {
+                animate(info.target, {x: 0, opacity: 1}, {
+                    delay: stagger(0.5),
+                    type: "spring",
+                    damping: 150,
+                    stiffness: 200
+                })
+            });
+        }, []);
+
 
         return (
 
-            <div className="dropIn w-full lg:w-4/12 flex flex-col items-center gap-1 h-96">
+            <motion.div initial={{x: "-100%", opacity: 0}}
+                        className="slider-img w-full lg:w-4/12 flex flex-col items-center gap-1 h-96">
 
                 {portfolioItem.img === null ? <></> :
                     <div className="min-h-72 min-w-72 max-w-72 max-h-72">
                         <img onClick={imgPop} src={portfolioItem.img}
-                             className="cursor-pointer w-full h-full" alt={portfolioItem.description} />
+                             className="cursor-pointer w-full h-full" alt={portfolioItem.description}/>
                     </div>
                 }
 
@@ -551,7 +578,7 @@ function Body() {
                 <p className="text-gray-800 text-lg italic text-center w-8/12">{portfolioItem.description}</p>
                 <p className="text-gray-600 text-center">{portfolioItem.year}</p>
 
-            </div>
+            </motion.div>
         );
     }
 
@@ -571,7 +598,7 @@ function Body() {
 
     function PortfolioButton({text, id, isActive, setActiveID}) {
         const baseStyling =
-            "border-2 w-fit px-4 py-1 border-black rounded-2xl transition-all duration-200 hover:text-white hover:bg-lagoon hover:border-lagoon text-2xl font-semibold";
+            "select-none border-2 w-fit px-4 py-1 border-black rounded-2xl transition-color hover:text-white hover:bg-lagoon hover:border-lagoon text-2xl font-semibold";
         const activeStyling = " bg-lagoon border-lagoon text-white";
         const inactiveStyling = " bg-transparent text-gray-800";
 
@@ -580,6 +607,9 @@ function Body() {
 
         function whenClicked() {
 
+            if(isActive)
+                return;
+
             setActiveID(id); // Notify parent component of the active button
             setActivePortfolio(filterPortfolioItems(id).map(item =>
                 <PortfolioItem portfolioItem={item}/>
@@ -587,39 +617,63 @@ function Body() {
         }
 
         return (
-            <button id={id} className={bStyling} onClick={whenClicked}>
+            <motion.button whileHover={{scale: 1.05}} whileTap={{scale: 0.8}} transition={{
+                type: "spring",
+                duration: 40,
+                stiffness: 200,
+            }} id={id} className={bStyling} onClick={whenClicked}>
                 {text}
-            </button>
+            </motion.button>
         );
     }
 
+    React.useEffect(() => {
+        animate(".delayer-heading", {y: 0, opacity: 1}, {
+            delay: stagger(0.2),
+            type: "spring",
+            damping: 200,
+            stiffness: 700
+        })
+    }, []);
+
+    const initHeader = {y: 150, opacity: 0};
 
     return (
         <div className="flex flex-col w-full mt-12">
             <div className="flex flex-col w-full justify-center bg-offwhite">
 
                 <div className="flex flex-col justify-center items-center mb-24">
-                    <h1 className="text-3xl md:text-5xl font-bold text-center" id="about">Peyton Hudson's Portfolio</h1>
-                    <h2 className="text-md md:text-xl mt-2 text-gray-500">Dual Major In Painting & Drawing and
-                        History</h2>
+                    <motion.h1 initial={initHeader}
+                               className="delayer-heading text-3xl md:text-5xl font-bold text-center" id="about">Peyton
+                        Hudson's Portfolio
+                    </motion.h1>
+                    <motion.h2 initial={initHeader}
+                               className="delayer-heading text-md md:text-xl mt-2 text-gray-500">Dual Major In Painting
+                        & Drawing and
+                        History
+                    </motion.h2>
 
-                    <h2 className="text-md md:text-xl mt-2 text-gray-500">UNF 2027</h2>
+                    <motion.h2 initial={initHeader}
+                               className="delayer-heading text-md md:text-xl mt-2 text-gray-500">UNF 2027
+                    </motion.h2>
                 </div>
 
                 <div className="flex flex-col  lg:flex-row items-center justify-center gap-24">
                     <div className="lg:w-4/12 flex flex-col items-center justify-center">
-                        <img className="rounded-full shadow-lg shadow-t_black w-1/2 lg:w-10/12" src={headshot}/>
+                        <motion.img initial={{x: '-100%'}} animate={{x: 0}} transition={standardSpring}
+                                    className="rounded-full shadow-lg shadow-t_black w-1/2 lg:w-10/12" src={headshot}/>
                     </div>
 
                     <div className="lg:w-4/12 px-12 lg:px-0">
-                        <p className="text-xl leading-loose">
-                            Hi, I'm Peyton! I'm currently studying Drawing and Art at the University of North Florida,
+                        <motion.p className="text-xl leading-loose" initial={{x: '100%'}} animate={{x: 0}}
+                                  transition={standardSpring}>
+                            Hi, I'm Peyton! I'm currently studying Painting and Drawing at the University of North Florida,
                             where I'm combining my love for creativity with a deep interest in history. My dream is to
                             work in a space that values both—whether that's in the digital art world or in a museum
                             setting, preserving and sharing stories from the past. I’m looking for opportunities where I
                             can bring my passion for drawing, digital art, and history together, ideally with a company
                             that values and supports these areas as much as I do.
-                        </p>
+                        </motion.p>
                     </div>
 
 
@@ -661,15 +715,15 @@ function Body() {
             <Portfolio/>
 
             <div id="contact" className="bg-lagoon w-full mt-32 flex flex-col items-center gap-6 pb-12">
-                <img src={divider_waves} width="100%" alt="Divider waves"/>
+                <img src={divider_waves} className={"w-full"} alt="Divider waves"/>
 
-                <h1 className="text-sunshine text-center text-5xl font-bold py-4">Get In Touch</h1>
+                <motion.h1 initial={{y: 100}} transition={standardSpring} whileInView={{y:0}} className="text-sunshine text-center text-5xl font-bold py-4">Get In Touch</motion.h1>
 
-                <p className="lg:w-8/12 w-11/12 text-center text-offwhite text-2xl mb-12">
+                <motion.p initial={{y: 100}} transition={standardSpring} whileInView={{y:0}} className="lg:w-8/12 w-11/12 text-center text-offwhite text-2xl mb-12">
                     If you're interested in contacting, hiring, or collaborating with me,
                     please don't hesitate to get in touch. You can reach out via phone or email,
                     and I'll be happy to discuss any opportunities. Looking forward to connecting!
-                </p>
+                </motion.p>
 
                 <div className="flex flex-col md:flex-row items-center justify-evenly gap-12 lg:gap-24 pb-12 lg:pb-24">
                     <LinkedYellowButton link="tel:9045894772" text="Phone"/>
