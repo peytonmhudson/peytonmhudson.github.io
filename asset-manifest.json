@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dfa10cc7.css",
-    "main.js": "/static/js/main.893b65fa.js",
-    "static/js/453.0a36081d.chunk.js": "/static/js/453.0a36081d.chunk.js",
+    "main.css": "/static/css/main.4809fd6b.css",
+    "main.js": "/static/js/main.a45fefed.js",
     "static/media/DressUpDolly.jpg": "/static/media/DressUpDolly.0d6215db0dae706c1569.jpg",
     "static/media/cowgirl.jpg": "/static/media/cowgirl.7019ed93ececfcfa6f57.jpg",
     "static/media/headshot.jpg": "/static/media/headshot.28305600e9022bb85ccd.jpg",
@@ -18,12 +17,11 @@
     "static/media/layered-waves-haikei.svg": "/static/media/layered-waves-haikei.71c5dcb8783efb0e384434aa6ad6a15c.svg",
     "index.html": "/index.html",
     "static/media/curve.svg": "/static/media/curve.c462a6fa493c3bedced3ef1705bac4d5.svg",
-    "main.dfa10cc7.css.map": "/static/css/main.dfa10cc7.css.map",
-    "main.893b65fa.js.map": "/static/js/main.893b65fa.js.map",
-    "453.0a36081d.chunk.js.map": "/static/js/453.0a36081d.chunk.js.map"
+    "main.4809fd6b.css.map": "/static/css/main.4809fd6b.css.map",
+    "main.a45fefed.js.map": "/static/js/main.a45fefed.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfa10cc7.css",
-    "static/js/main.893b65fa.js"
+    "static/css/main.4809fd6b.css",
+    "static/js/main.a45fefed.js"
   ]
 }
