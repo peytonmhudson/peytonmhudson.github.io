@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.4809fd6b.css",
-    "main.js": "/static/js/main.a45fefed.js",
-    "static/media/DressUpDolly.jpg": "/static/media/DressUpDolly.0d6215db0dae706c1569.jpg",
-    "static/media/cowgirl.jpg": "/static/media/cowgirl.7019ed93ececfcfa6f57.jpg",
+    "main.css": "/static/css/main.778c5ce7.css",
+    "main.js": "/static/js/main.42ecfca2.js",
+    "static/media/spiral.jpg": "/static/media/spiral.bf14cb42cee60535c9bd.jpg",
     "static/media/headshot.jpg": "/static/media/headshot.28305600e9022bb85ccd.jpg",
-    "static/media/older_lady.jpg": "/static/media/older_lady.2c4b464cfef84527006d.jpg",
-    "static/media/Arches.jpg": "/static/media/Arches.b4551ef733a4a66a9157.jpg",
-    "static/media/girl_on_canvas.jpg": "/static/media/girl_on_canvas.f6f033a422534e780209.jpg",
-    "static/media/Union_poster_.jpg": "/static/media/Union_poster_.4999ad7b4f33984636dc.jpg",
+    "static/media/cowgirl.jpg": "/static/media/cowgirl.7ae30694bb8ef5726e78.jpg",
+    "static/media/purpWoman.jpg": "/static/media/purpWoman.45643dd7da45a827e9d9.jpg",
+    "static/media/older_lady.jpg": "/static/media/older_lady.178b3e25dd9b56dd37eb.jpg",
+    "static/media/Arches.jpg": "/static/media/Arches.d9607419e46a8b229ca6.jpg",
+    "static/media/bead.jpg": "/static/media/bead.106cec3b1c29b3a26383.jpg",
+    "static/media/girl_on_canvas.jpg": "/static/media/girl_on_canvas.b3af7fa8a8f71a1c9713.jpg",
+    "static/media/Union_poster_.jpg": "/static/media/Union_poster_.9adc87566a1571f5fb41.jpg",
+    "static/media/DressUpDolly.jpg": "/static/media/DressUpDolly.3e2eec60142d2fe5342e.jpg",
+    "static/media/twiggy.jpg": "/static/media/twiggy.72fb7e28451c5d739cf0.jpg",
     "static/media/translogo.png": "/static/media/translogo.1904dfb67ec8b7c3d9d4.png",
-    "static/media/big_cat_logo.jpg": "/static/media/big_cat_logo.6cbd19de9f81063d7dc1.jpg",
-    "static/media/CC_Logo.jpg": "/static/media/CC_Logo.f86dab65b372830635dd.jpg",
+    "static/media/big_cat_logo.jpg": "/static/media/big_cat_logo.1dbd57bf977bd86e9216.jpg",
+    "static/media/CC_Logo.jpg": "/static/media/CC_Logo.13f4ef257cea0c0a9cac.jpg",
     "static/media/lines.png": "/static/media/lines.34d119cc7ff9aea0c0d0.png",
     "static/media/waves.svg": "/static/media/waves.50ee9e67d784ae5d37c8bcf797e37ae0.svg",
     "static/media/layered-waves-haikei.svg": "/static/media/layered-waves-haikei.71c5dcb8783efb0e384434aa6ad6a15c.svg",
     "index.html": "/index.html",
     "static/media/curve.svg": "/static/media/curve.c462a6fa493c3bedced3ef1705bac4d5.svg",
-    "main.4809fd6b.css.map": "/static/css/main.4809fd6b.css.map",
-    "main.a45fefed.js.map": "/static/js/main.a45fefed.js.map"
+    "main.778c5ce7.css.map": "/static/css/main.778c5ce7.css.map",
+    "main.42ecfca2.js.map": "/static/js/main.42ecfca2.js.map"
   },
   "entrypoints": [
-    "static/css/main.4809fd6b.css",
-    "static/js/main.a45fefed.js"
+    "static/css/main.778c5ce7.css",
+    "static/js/main.42ecfca2.js"
   ]
 }
